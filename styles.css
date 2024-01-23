@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap');
+
 body {
     background-color: black;
 }
@@ -43,8 +45,12 @@ body {
     color: #b3b3b3;
     text-decoration: none;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
     font-family: "DM sans", sans-serif;
+}
+
+.sidebar nav ul li a .fa {
+    margin-right: 10px;
 }
 
 .library {
@@ -52,37 +58,181 @@ body {
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     color: #b3b3b3;
     margin-top: 10px;
+    padding: 4px 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.library__content {
+    display: flex;
+    justify-content: space-between;
 }
 
 .library__button {
-    margin-left: 10px;
+    display: flex;
+    margin-right: 10px;
     background-color: transparent;
     border: 0;
-    font-size: 16px;
+    font-family: "DM sans", sans-serif;
+    font-size: 14px;
     color: #b3b3b3;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
     font-weight: 700;
     padding: 20px 10px;
-    display: flex;
 }
 
 .library__button .fa {
     margin-right: 10px;
     font-size: 20px;
     font-weight: 300;
-    padding-right: 7px;
+    padding-right: 8px;
 }
 
-.library__content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+@keyframes loading {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(180deg);
+	}
 }
 
 .library .library__content .fa-plus {
     margin: 24px 10px;
     margin-left: 90px;
+    cursor: pointer;
  }
+
+ .library__content .fa-plus:hover {
+   animation: loading 1s; 
+ }
+
+ .section-playlist {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #242424;
+    color: #b3b3b3;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 8px 0px;
+    padding: 16px 20px;
+    border-radius: 8px;
+ }
+
+ .section-playlist__content {
+    display: flex;
+    flex-direction: column;
+ }
+
+ .section-playlist__content .text {
+    padding-bottom: 14px;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+ }
+
+ .section-playlist__content .title {
+    font-weight: 700;
+ }
+
+ .section-playlist__content .subtitle {
+    font-weight: 500;
+    font-size: 12px;
+ }
+
+.section-playlist__button {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'DM Sans', sans-serif; 
+    padding: 10px;
+    margin-top: 12px;
+    border: 0;
+    width: 115px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.section-playlist__button:hover {
+    box-shadow: 2px 1px 5px black;
+    transform: scale(1.1);
+}
+
+.cookies {
+    margin: 25px 20px;
+}
+
+.cookies a {
+    color: #b3b3b3;
+    font-weight: 500;
+    font-size: 10px;
+    text-decoration: none;
+    margin-left: -15px;
+}
+
+.cookies a:hover {
+    text-decoration: underline;
+}
+
+.languages__button {
+    background-color: transparent;
+    border: 1px solid #878787;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    width: 170px;
+    margin: 8px;
+    padding: 8px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #ae2896, #509bf5);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__content {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+.footer__button {
+    background-color: white;
+    border: 0;
+    border-radius: 50px;
+    color: black;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bolder;
+    height: 50px;
+    width: 200px;
+    margin: 8px;
+    padding: 8px;
+    font-family: 'DM Sans', sans-serif;
+    transition: 0.3s;
+}
+
+.footer__button:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.442);
+}
 
 
